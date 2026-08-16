@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="trafficlight"  >
+    <div class="redlight" onclick="manualLight(red)"></div>
+    <div class="yellowlight" onclick="manualLight(yellow)"></div>    
+    <div class="greenlight" onclick="manualLight(green)"></div>
+    </div>
+
+        <div class="buttons">
+        <button onclick="startAutomatic()">Start Automatic</button>
+        <button onclick="stopAutomatic()">Stop</button>
+    </div>
+
+
+<script>
+
+const red = document.querySelector(".redlight");
+const yellow = document.querySelector(".yellowlight");
+const green = document.querySelector(".greenlight");
+
+let interval;
+
+function resetLights() {
+    red.classList.remove("active-red");
+    yellow.classList.remove("active-yellow");
+    green.classList.remove("active-green");
+}
+
+function manualLight(color) {
+    stopAutomatic(); 
+    resetLights();
+
+    if (color === "red") {
+        red.classList.add("active-red");
+    }
+
+    if (color === "yellow") {
+        yellow.classList.add("active-yellow");
+    }
+
+    if (color === "green") {
+        green.classList.add("active-green");
+    }
+}
+
+
+function automaticCycle() {
+    setTimeout(() => {
+
+        resetLights();
+        red.classList.add("active-red");
+    } , 2000)
+
+    setTimeout(() => {
+        resetLights();
+        yellow.classList.add("active-yellow");
+    }, 4000);
+
+    setTimeout(() => {
+        resetLights();
+        green.classList.add("active-green");
+    }, 8000);
+}
+
+function startAutomatic() {
+
+    stopAutomatic();
+
+    automaticCycle();
+
+    interval = setInterval(() => {
+        automaticCycle();
+    }, 1000); 
+}
+
+function stopAutomatic() {
+    clearInterval(interval);
+}
+    </script>
+</body>
+</html>

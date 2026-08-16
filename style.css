@@ -1,0 +1,68 @@
+body {
+      background-color: black;
+      margin:0;
+
+    }
+.trafficlight{
+    background-color: azure;
+    padding:20px;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    width:100px;
+
+
+}
+.redlight{
+    width:50px;
+    height:50px;
+    background-color:red;
+    border-radius:50%;
+    margin:10px;
+
+}
+
+.active-red{
+    background:darkred;
+    box-shadow:0 0 20px rgb(178, 63, 63);
+}
+
+.active-yellow{
+    background:rgb(96, 96, 5);
+    box-shadow:0 0 20px rgb(123, 153, 2);
+}
+
+.active-green{
+    background:#176817;
+    box-shadow:0 0 20px rgb(6, 107, 6);
+}
+
+.yellowlight{
+    width:50px;
+    height:50px;
+    background-color:yellow;
+    border-radius:50%;
+    margin:10px;
+    
+}
+.greenlight{
+    width:50px;
+    height:50px;
+    background-color:green;
+    border-radius:50%;
+    margin:10px;
+    
+}
+
+button{
+    padding:10px 20px;
+    margin:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: blue;
+}
+
