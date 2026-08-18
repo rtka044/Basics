@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+   <script>
+ Print numbers from 1 to 20 using a for loop.
+
+for (let i=1; i<= 20;i++) {
+    console.log(i);
+}
+
+// Print all even numbers between 1 and 50 using a for loop
+
+for (let i = 1; i <= 50; i++) {
+    if (i % 2 === 0) {
+       console.log(i);
+    }
+}
+ 
+
+//Print the multiplication table of a given number (e.g. 7) from 1 to 10.
+
+let number=Number(prompt("enetr number:")) ;
+for (let i = 1; i <= 10; i++) {
+    console.log(`${number} * ${i} = ${number * i}`);
+}
+
+
+//Write a for loop to print numbers from 10 down to 1 (reverse order).
+
+for(let i=10;i>=1;i--){
+    console.log(i)
+}
+
+
+ //Calculate the sum of all numbers from 1 to 100 using a for loop.
+let sum= 0;
+for (let i = 1; i <= 100; i++) {
+    sum+= i;
+}
+console.log(`The sum is: ${sum}`); 
+
+
+
+// Write a program to find the factorial of a number using a for loop.
+
+let num = 5;
+let factorial = 1;
+
+for (let i = 1; i <= num; i++) {
+    factorial *= i;
+}
+console.log(`The factorial of ${num} is ${factorial}`);
+
+
+// Write a program to check whether a given number is prime using a for loop.
+
+let num =Number(prompt("enter number:"));
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            console.log("false")
+            break; 
+        }
+        else{
+            console.log("true")
+        } 
+    }
+
+
+//Use a nested for loop to print a right-angled triangle pattern of stars (*) for n rows.
+
+ let n = Number(prompt("Enter number of rows:"));
+for (let i = 1, row = ""; i <= n; i++) {
+    console.log(row += "*");
+}
+
+
+//Write a program to reverse a string using a for loop (without using built-in reverse methods).
+
+let text = prompt("Enter a string:");
+for (let i = text.length - 1; i >= 0; i--) {
+    console.log(text[i]);
+}
+
+
+// Write a program to find the sum of digits of a number using a for loop.
+let num = prompt("Enter a number:");
+let sum = 0;
+for (let i = 0; i < num.length; i++) {
+    sum += Number(num[i]);}
+console.log(`The sum of digits is: ${sum}`);
+
+   </script> 
+</body>
+</html>

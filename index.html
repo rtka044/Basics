@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<h1>index</h1>
+<body>
+    <script>
+        //Write a program to check whether a given number is positive, negative, or zero using if-else.
+let a = Number(prompt("Enter number:"));
+if (a>0){
+    console.log("number is positive")
+}
+else if (a<0){
+    console.log("number is negative")
+}
+else{
+    console.log("number is zero")
+  }
+  
+
+
+//Write a program using if-else to check if a number is even or odd.
+let a = Number(prompt("Enter number:"));
+if(a/2){
+    console.log("number is even")
+}
+else{
+    console.log("number is odd")
+}
+
+
+//Given a person's age, print "Eligible to vote" or "Not eligible" using if-else.
+let age= Number(prompt("Enter number:"));
+if(age>=18){
+    console.log("eligible to vote")
+}
+else{
+    console.log("not eligible")
+}
+
+//Write a switch statement that prints the name of the day("Monday", "Tuesday"...) for a given day number (1–7).
+let Daynumber = Number(prompt("enter Day number:"));
+
+switch (Daynumber) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    
+}
+
+
+
+//Write a switch statement (with fall-through) that groups months into seasons (Winter, Summer, Monsoon) for a given month number.
+
+let MonthNumber= Number(prompt("enter month number:"))
+switch(MonthNumber) {
+    case 1:
+    case 2:
+    case 10:
+    case 11:
+    case 12:
+    console.log("winter month")
+    break;
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    console.log("summer month")
+     break;
+    case 7:
+    case 8:
+    case 9:
+    console.log("monsoon month")
+    break;
+}
+    
+    </script>
+</body>
+</html>
